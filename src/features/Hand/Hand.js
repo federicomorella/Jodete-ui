@@ -11,7 +11,7 @@ export function Hand({cards}){
 
   useEffect(()=>{
     if(sortedBySuit){
-      setHand(cards.slice().sort((a,b)=>{return a.suit-b.suit}))
+      setHand(cards.slice().sort((a,b)=>{return a.suit==b.suit?(a.number-b.number):(a.suit-b.suit)}))
     }
     else
       setHand(cards.slice().sort((a,b)=>{return a.number-b.number}))
