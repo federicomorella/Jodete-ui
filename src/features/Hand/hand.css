@@ -1,0 +1,23 @@
+.hand-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-row: auto 1fr;
+}
+
+.hand-button-sort{
+    grid-area: 1/1/2/2;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.hand-cards{
+    z-index: 0;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    overflow-x: scroll;
+    display: flex;
+    flex-flow:wrap row;
+
+}

@@ -1,0 +1,19 @@
+.game{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left:0;
+  top:0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.item-hand{
+  grid-area: 3/1/4/4;
+  overflow-y: auto;
+}
+
+.item-hidden-deck{
+  grid-area: 2/2/3/3;
+}
