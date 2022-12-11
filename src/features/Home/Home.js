@@ -1,10 +1,19 @@
-import React from 'react'
+import {React, useState} from 'react'
 import {Button, Form } from 'react-bootstrap'
 import './home.css'
-
+import {getJWT} from '../../services/jwt'
+import { isThisTypeNode } from 'typescript'
 
 export const Home = () => {
-    let nombre;
+    const [name, setName] = useState('');
+
+    const handleJoinGame=async (e)=>{
+        console.log(await getJWT(name))
+    }
+
+    const handleCreateGame=(e)=>{
+
+    }
 
     return (
         <div >
@@ -21,9 +30,9 @@ export const Home = () => {
                 </div>
 
         
-                <Form.Control type="text" placeholder="Nombre" value={nombre} />
-                <Button className='mt-1'>Crear juego</Button>
-                <Button className='mt-1'>Unirse</Button>
+                <Form.Control type="text" placeholder="Nombre" value={name} onChange={(e)=>setName(e.target.value)}/>
+                <Button className='mt-1' onClick={handleCreateGame}>Crear juego</Button>
+                <Button className='mt-1' onClick={handleJoinGame}>Unirse</Button>
 
             </div>
         </div>

@@ -1,0 +1,20 @@
+{
+  "name": "jodete-static-server",
+  "version": "1.0.0",
+  "description": "Es el encargado de servir la app al cliente La Home de la app pide un nombre al usuario para entrar al juego.  El servidor genera un jwt con el nombre y un uuid para que las api's puedan identificarlo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0"
+  }
+}

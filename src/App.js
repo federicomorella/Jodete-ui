@@ -31,13 +31,13 @@ function App() {
 
   return (
     <div >
-      <div hidden={showHome}>
+      <div hidden={!showHome}>
         <Home/>
       </div>
 
 
 
-      <div className='game' hidden={!showHome}>        
+      <div className='game' hidden={showHome}>        
         <div className='item-hidden-deck'>
             <Deck/>
         </div>
