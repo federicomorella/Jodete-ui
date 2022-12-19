@@ -1,0 +1,46 @@
+
+.player{
+    padding: 5px;
+    min-width: 100px;
+    height: 100px;
+    background-color: rgb(115, 124, 124);
+    border-radius: 2px;
+    box-shadow:    
+    inset  -1px 5px 10px rgba(223, 219, 219, 0.37),
+            -1px 5px 10px  rgba(223, 219, 219, 0.37);
+    padding: 5px;
+    color:azure;
+    overflow: hidden;   
+    font-size: 10px;
+    text-align: center;    
+
+}
+.player_turn{
+    padding: 5px;
+    min-width: 100px;
+    height: 100px;
+    background-color: rgb(15, 240, 240);
+    border-radius: 2px;
+    box-shadow:    
+    inset  -1px 5px 10px rgba(2, 8, 8, 0.37),
+            -0px 3px 20px  rgb(133, 224, 245);
+    padding: 5px;
+    color:rgb(10, 34, 34);
+    overflow: hidden;   
+    font-size: 10px;
+    text-align: center; 
+}
+
+.players_container{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+
+    align-items: center;
+    justify-content: center;
+    margin:  0;
+    padding: 0;
+   
+}

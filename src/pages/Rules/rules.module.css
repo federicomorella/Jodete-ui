@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+}
+
+p{
+    height: 100%;
+}
+.description{
+    text-align: justify;
+    bottom: 300px;
+    overflow-y: scroll;
+}
+
+.rules{
+    padding: 50px 10% 25px 10%;
+    position:fixed;
+    height: 100%;
+    padding-bottom: 100px;
+    display: grid;
+    color:azure;   
+
+}

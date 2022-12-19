@@ -1,19 +1,16 @@
-.game{
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left:0;
-  top:0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
 
-.item-hand{
-  grid-area: 3/1/4/4;
-  overflow-y: auto;
-}
-
-.item-hidden-deck{
-  grid-area: 2/2/3/3;
+footer{
+  position:absolute;
+  z-index: 10;
+  bottom:0;
+  height: 25px;
+  width: 100%;
+  background-color: rgba(255, 255, 255);
+  color:rgb(112, 104, 143);
+  padding: 5px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  gap:100px;
+  justify-content: center;
 }

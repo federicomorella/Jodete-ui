@@ -1,0 +1,40 @@
+.game{
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    left:0;
+    top:0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  
+  .item-hand{
+    grid-area: 3/1/4/4;
+    overflow-y: auto;
+    /* border-style: outset; */
+    background-color: rgba(146, 236, 236, 0.527);
+    margin-bottom: 25px;
+    box-shadow:
+    
+    inset  -1px 5px 10px rgba(223, 219, 219, 0.37),
+            -1px 5px 10px  rgba(223, 219, 219, 0.37);
+  }
+  
+
+.item-stock-deck{
+    grid-area: 2/2/3/3;
+  }
+
+.item-discarded-deck{
+    grid-area: 2/3/3/4;
+  }
+
+.item-players{
+  grid-area:1/1/2/4;
+  display: grid;
+  margin:  20px 20px 50px 20px;
+  overflow-x: auto;
+  padding: 0;
+  
+}

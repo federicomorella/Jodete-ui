@@ -1,5 +1,5 @@
-import {React,useEffect,useState} from 'react'
-import { Card } from '../Card/Card'
+import {React,useEffect,useState,useId} from 'react'
+import { Card } from '../Card'
 import { Button ,ButtonGroup} from 'react-bootstrap'
 import './hand.css'
 
@@ -11,7 +11,7 @@ export function Hand({cards}){
 
   useEffect(()=>{
     if(sortedBySuit){
-      setHand(cards.slice().sort((a,b)=>{return a.suit==b.suit?(a.number-b.number):(a.suit-b.suit)}))
+      setHand(cards.slice().sort((a,b)=>{return a.suit===b.suit?(a.number-b.number):(a.suit-b.suit)}))
     }
     else
       setHand(cards.slice().sort((a,b)=>{return a.number-b.number}))
@@ -38,9 +38,12 @@ export function Hand({cards}){
           </ButtonGroup>
         </div>
         <div className='hand-cards'>
-          {hand.map((card)=>{  
+          {hand.map((card,index)=>{  
+              card.show=true
               return ( 
-                <Card key={card.id} card={card}/>
+                <div key={index} className='hand-card'>
+                  <Card  card={card}/>
+                </div>
               );    
             })}
         </div>
