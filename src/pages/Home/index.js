@@ -1,19 +1,25 @@
-import {React, useState} from 'react'
+import {React, useState, useEffect} from 'react'
 import {Button, Form } from 'react-bootstrap'
 import './home.css'
 import {getJWT} from '../../services/jwt'
 import { Link } from 'react-router-dom'
 
 
-export const Home = () => {
+export const Home = ({login,username}) => {
     const [name, setName] = useState('');
 
+    useEffect(() => {
+      console.log({username})
+    
+    }, [username])
+    
+
     const handleJoinGame=async (e)=>{
-        console.log(await getJWT(name))
+        login(name)
     }
 
     const handleCreateGame=(e)=>{
-
+        login(name)
     }
 
     return (

@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import {Hand} from 'components/Hand';
 import { StockDeck } from 'components/StockDeck';
 import { DiscardedDeck } from 'components/DiscardedDeck';
@@ -20,7 +20,14 @@ const cards = (()=>{
       return c;
   })();
 
-export function Game(){
+export function Game({logout,username,uuid}){
+  
+  useEffect(() => {
+    console.log('GAME:')
+    console.log({logout,username,uuid})
+
+  }, [logout,username,uuid])
+  
 
   return (
     <div className={styles['game']} >    

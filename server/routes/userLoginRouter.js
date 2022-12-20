@@ -18,8 +18,12 @@ userLoginRouter.route('/')
     const name=req.body.username
     const token=getToken(name);
     console.log({token})
-    console.log(jwt.verify(token,process.env.JWT_SECRET || 'JWT_SECRET'))
-    res.send({'token':token})
+    const {username,uuid}=jwt.verify(token,process.env.JWT_SECRET || 'JWT_SECRET')
+    res.send({
+        token:token,
+        username:username,
+        uuid:uuid
+    })
 })
 
 /**************************************************************************************

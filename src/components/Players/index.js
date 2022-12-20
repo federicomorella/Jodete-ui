@@ -31,11 +31,8 @@ export const Players = () => {
     const playersRef=useRef();
 
     if(playersRef&& playersRef.current&&playersRef.current.parentElement){
-        const parent=playersRef.current.parentElement;
         const currentPlayer=playersRef.current.childNodes[turn];
-        
         currentPlayer.scrollIntoView();
-      
     }
 
     return (        
