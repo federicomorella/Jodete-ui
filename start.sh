@@ -14,14 +14,10 @@ then
 fi
 
 #install server modules
-if [ ! -d "./server/node_modules" ] 
-then
-    echo "Installing node modules for server"
-    cd server && npm install && cd ..
-fi
+# if [ ! -d "./server/node_modules" ] 
+# then
+#     echo "Installing node modules for server"
+#     cd server && npm install && cd ..
+# fi
 
-
-#starts servers
-echo starting server...
-cd server
 npm start
