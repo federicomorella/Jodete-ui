@@ -7,7 +7,7 @@
  */
 export async function getJWT(userName) {
     console.log({userName});
-    const response = await fetch((process.env.HOST||'http://localhost:3001') + '/login', {
+    const response = await fetch((process.env.HOST||'http://localhost:3000') + '/login', {
         method: 'POST', 
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
         headers: {

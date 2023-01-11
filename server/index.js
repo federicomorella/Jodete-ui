@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 app.use('/login',userLoginRouter)
 
 
-app.use('/', express.static('../build'));
+app.use('/', express.static('./build'));
 
 app.listen(process.env.PORT||3000,()=>{
     console.log("server running on port " + (process.env.PORT||3000))

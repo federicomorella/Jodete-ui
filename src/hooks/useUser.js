@@ -1,5 +1,5 @@
 import  { React, useCallback, useState , useEffect} from 'react'
-import { getJWT } from 'services/jwt' 
+import { getJWT } from 'services/jwt'
 
 export function useUser(){
     const [jwt, setJwt] = useState()
@@ -18,13 +18,18 @@ export function useUser(){
     }
 
     useEffect(() => {
-        const localJwt=localStorage.getItem('jwt')
+        const localJwt=localStorage.getItem('jwt') //si existe recupera el jwt del local storage
         if(localJwt){
-            const jwtValues=parseJwt(localJwt);
-            setIsLogged(true)
-            setUsername(jwtValues.username)
-            setUuid(jwtValues.uuid)
-            setJwt(localJwt)
+            try{
+                const jwtValues=parseJwt(localJwt);
+                setIsLogged(true)
+                setUsername(jwtValues.username)
+                setUuid(jwtValues.uuid)
+                setJwt(localJwt)
+            }
+            catch(err){
+
+            }
         }
 
     }, [])
