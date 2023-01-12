@@ -8,7 +8,7 @@ import useCable from 'services/websocket'
 import { 
   Route, Routes
 } from 'react-router-dom'
-import { useGame } from 'hooks/useGame'
+import { useGameLogin } from 'hooks/useGameLogin'
 
 
 
@@ -23,7 +23,7 @@ function App() {
     code,
     player,
     players,
-    loadingGame} =useGame()
+    loadingGame} =useGameLogin()
 
 
   return (
@@ -34,8 +34,9 @@ function App() {
           <Route path='rules' element={<Rules/>} />
         </Routes>  
         <footer>
+          {code?<div>{`Código de sala: ${code}`}</div>:null}
           <div>
-            Jodete
+            {player?`Jugador: ${player.name}`:'Jodete'}
           </div>
       </footer>
       

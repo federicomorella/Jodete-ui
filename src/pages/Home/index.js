@@ -68,7 +68,7 @@ export const Home = ({game}) => {
                 </div>
                 <div>{promptGameCode}</div>
                 <Link to='/rules'>Rules</Link>
-                <Link to='/game'>Game</Link>
+                {/* <Link to='/game'>Game</Link> */}
                 <Form.Control type="text" placeholder="Nombre" value={name} onChange={(e)=>setName(e.target.value)}/>
                 <Button className='mt-1' onClick={handleCreateGame}>Crear juego</Button>
                 <Button className='mt-1' onClick={handleJoinGame}>Unirse</Button>

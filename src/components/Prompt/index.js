@@ -21,7 +21,13 @@ export function Prompt({message, callback}){
   
   return (
     <>
-      <Modal show={show} onHide={()=>close(null)}>
+      <Modal 
+      show={show}
+      onHide={()=>close(null)}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      style={{color:'black'}}
+      centered>
           <Modal.Header closeButton>
           </Modal.Header>
           <Modal.Body>
